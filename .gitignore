@@ -15,11 +15,7 @@ models/
 *.cache
 *.trt
 
-# --- Benchmark output ---
-# Keep the JSON results and charts if you want them versioned; ignore by
-# default since they're regenerated. Delete these lines to commit them.
-results/*.png
-results/*.json
+
 
 # --- Python ---
 __pycache__/

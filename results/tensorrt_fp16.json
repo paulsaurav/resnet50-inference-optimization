@@ -1,0 +1,29 @@
+[
+  {
+    "batch_size": 1,
+    "p50_ms": 0.739,
+    "p95_ms": 5.707,
+    "p99_ms": 5.741,
+    "mean_ms": 1.642,
+    "throughput_ips": 609.0,
+    "name": "tensorrt_fp16"
+  },
+  {
+    "batch_size": 8,
+    "p50_ms": 2.098,
+    "p95_ms": 2.178,
+    "p99_ms": 2.189,
+    "mean_ms": 2.121,
+    "throughput_ips": 3772.6,
+    "name": "tensorrt_fp16"
+  },
+  {
+    "batch_size": 32,
+    "p50_ms": 6.279,
+    "p95_ms": 7.002,
+    "p99_ms": 7.028,
+    "mean_ms": 6.252,
+    "throughput_ips": 5118.4,
+    "name": "tensorrt_fp16"
+  }
+]

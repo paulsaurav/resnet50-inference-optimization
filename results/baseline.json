@@ -1,0 +1,110 @@
+[
+  {
+    "name": "pytorch_fp32",
+    "batch_size": 1,
+    "device": "cuda",
+    "dtype": "float32",
+    "n_iters": 200,
+    "p50_ms": 6.871,
+    "p95_ms": 7.073,
+    "p99_ms": 7.965,
+    "mean_ms": 6.908,
+    "throughput_ips": 144.8
+  },
+  {
+    "name": "pytorch_fp16",
+    "batch_size": 1,
+    "device": "cuda",
+    "dtype": "float16",
+    "n_iters": 200,
+    "p50_ms": 7.921,
+    "p95_ms": 8.079,
+    "p99_ms": 8.418,
+    "mean_ms": 7.947,
+    "throughput_ips": 125.8
+  },
+  {
+    "name": "pytorch_fp32",
+    "batch_size": 8,
+    "device": "cuda",
+    "dtype": "float32",
+    "n_iters": 200,
+    "p50_ms": 6.366,
+    "p95_ms": 6.815,
+    "p99_ms": 6.996,
+    "mean_ms": 6.438,
+    "throughput_ips": 1242.7
+  },
+  {
+    "name": "pytorch_fp16",
+    "batch_size": 8,
+    "device": "cuda",
+    "dtype": "float16",
+    "n_iters": 200,
+    "p50_ms": 7.626,
+    "p95_ms": 8.303,
+    "p99_ms": 8.659,
+    "mean_ms": 7.697,
+    "throughput_ips": 1039.3
+  },
+  {
+    "name": "pytorch_fp32",
+    "batch_size": 32,
+    "device": "cuda",
+    "dtype": "float32",
+    "n_iters": 200,
+    "p50_ms": 29.112,
+    "p95_ms": 34.052,
+    "p99_ms": 34.984,
+    "mean_ms": 29.978,
+    "throughput_ips": 1067.5
+  },
+  {
+    "name": "pytorch_fp16",
+    "batch_size": 32,
+    "device": "cuda",
+    "dtype": "float16",
+    "n_iters": 200,
+    "p50_ms": 15.099,
+    "p95_ms": 15.964,
+    "p99_ms": 16.284,
+    "mean_ms": 15.303,
+    "throughput_ips": 2091.1
+  },
+  {
+    "name": "onnxruntime_fp32",
+    "batch_size": 1,
+    "device": "cuda/ort",
+    "dtype": "varies",
+    "n_iters": 200,
+    "p50_ms": 2.673,
+    "p95_ms": 2.718,
+    "p99_ms": 2.783,
+    "mean_ms": 2.68,
+    "throughput_ips": 373.1
+  },
+  {
+    "name": "onnxruntime_fp32",
+    "batch_size": 8,
+    "device": "cuda/ort",
+    "dtype": "varies",
+    "n_iters": 200,
+    "p50_ms": 8.986,
+    "p95_ms": 11.959,
+    "p99_ms": 11.975,
+    "mean_ms": 9.163,
+    "throughput_ips": 873.1
+  },
+  {
+    "name": "onnxruntime_fp32",
+    "batch_size": 32,
+    "device": "cuda/ort",
+    "dtype": "varies",
+    "n_iters": 200,
+    "p50_ms": 32.265,
+    "p95_ms": 37.054,
+    "p99_ms": 38.028,
+    "mean_ms": 32.827,
+    "throughput_ips": 974.8
+  }
+]
