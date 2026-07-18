@@ -1,16 +1,3 @@
-"""
-Steps 1-2 of the project: FP32 baseline and ONNX export.
-
-Run this first on your GPU machine. It produces:
-  - The FP32 eager-mode baseline (your reference number).
-  - An FP16 variant (usually a big, nearly-free win on GPU).
-  - An ONNX export + ONNX Runtime CUDA benchmark.
-  - results/baseline.json with everything, for the report table.
-
-Usage:
-  python src/run_baseline.py --model resnet50 --batch-sizes 1 8 32
-"""
-
 import json
 import argparse
 from pathlib import Path

@@ -1,16 +1,3 @@
-"""
-Latency benchmark harness.
-
-This is the heart of the project. Getting timing right is what separates a
-credible benchmark from one that lies. Key correctness points:
-  - Warm-up runs are discarded (cold start, CUDA graph capture, autotuning).
-  - torch.cuda.synchronize() is called before/after timing on GPU, because
-    CUDA kernels are async — without sync you'd be timing kernel *launches*,
-    not kernel *execution*.
-  - We report percentiles (p50/p95/p99), not just the mean. Production SLAs
-    are written against tail latency, not averages.
-"""
-
 import time
 import statistics
 from dataclasses import dataclass, asdict

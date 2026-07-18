@@ -1,28 +1,3 @@
-"""
-Build TensorRT engines (FP16 and INT8) from the ResNet-50 ONNX export,
-benchmark them, and save the engines for the accuracy step.
-
-Pipeline: ONNX (from run_baseline.py)  ->  TRT engine  ->  timed inference.
-This is the production-standard path: the ONNX file is a real, portable
-deployment artifact, and TensorRT specializes it into a hardware-tuned engine.
-
-FP16   : half precision. Big speedup on tensor cores, accuracy ~unchanged.
-INT8   : 8-bit. Biggest speedup, but weights/activations must be *calibrated*
-         on real images so TensorRT picks good quantization scales. Without
-         calibration INT8 accuracy collapses, so we feed it a few hundred
-         ImageNet images via an IInt8EntropyCalibrator2.
-
-Written for TensorRT 10.x/11.x (build_serialized_network API).
-
-Usage:
-  # FP16 only (no data needed):
-  python src/build_trt_engine.py --onnx models/resnet50.onnx --precision fp16
-
-  # INT8 (needs a folder of ImageNet images for calibration):
-  python src/build_trt_engine.py --onnx models/resnet50.onnx --precision int8 \
-      --calib-dir imagenet/ILSVRC/Data/CLS-LOC/val --calib-images 512
-"""
-
 import os
 import json
 import argparse

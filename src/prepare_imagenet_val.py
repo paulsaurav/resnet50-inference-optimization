@@ -1,23 +1,3 @@
-"""
-Reorganize Kaggle ImageNet val images into ImageFolder layout.
-
-Kaggle ships val images flat:
-    imagenet/ILSVRC/Data/CLS-LOC/val/ILSVRC2012_val_00000001.JPEG ...
-with labels in LOC_val_solution.csv:
-    ImageId,PredictionString
-    ILSVRC2012_val_00000001,n01751748 <bbox...> n01751748 <bbox...>
-
-The first WNID in PredictionString is the ground-truth class. We move each
-image into val/<wnid>/. After this, datasets.ImageFolder works and — because
-all 1000 WNIDs sorted alphabetically match torchvision's expected index order —
-the labels line up correctly, so you get the real ~80.3% ResNet-50 top-1.
-
-Usage:
-    python src/prepare_imagenet_val.py \
-        --val-dir imagenet/ILSVRC/Data/CLS-LOC/val \
-        --csv imagenet/LOC_val_solution.csv
-"""
-
 import csv
 import shutil
 import argparse

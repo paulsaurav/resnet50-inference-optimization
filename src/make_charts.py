@@ -1,19 +1,3 @@
-"""
-Generate the charts for the README from the result JSON files.
-
-Reads:
-  results/baseline.json          (pytorch_fp32, pytorch_fp16, onnxruntime_fp32)
-  results/tensorrt_fp16.json
-  results/tensorrt_int8.json
-
-Produces:
-  results/latency_bs1.png        bar chart, batch-1 p50 latency per variant
-  results/throughput_bs32.png    bar chart, batch-32 throughput per variant
-  results/latency_vs_batch.png   line chart, p50 latency across batch sizes
-
-No seaborn, just matplotlib. Colors are colorblind-friendly.
-"""
-
 import json
 from pathlib import Path
 

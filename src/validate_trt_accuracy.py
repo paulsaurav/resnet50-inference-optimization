@@ -1,21 +1,3 @@
-"""
-Measure top-1 accuracy of a saved TensorRT engine on ImageNet val.
-
-Completes the tradeoff table: every latency number from build_trt_engine.py
-gets its accuracy partner here. Most important for INT8, where quantization
-actually costs accuracy and the whole point is measuring how much.
-
-We reuse the SAME preprocessing and the SAME ImageFolder label mapping as
-validate_accuracy.py, so the TRT numbers are directly comparable to the
-PyTorch FP32 baseline (80.35%).
-
-Usage:
-  python src/validate_trt_accuracy.py \
-      --engine models/resnet50_int8_bs32.engine \
-      --data imagenet/ILSVRC/Data/CLS-LOC/val \
-      --batch-size 32 --max-batches 100
-"""
-
 import argparse
 
 import numpy as np

@@ -1,20 +1,3 @@
-"""
-Accuracy validation.
-
-A speedup number is meaningless without an accuracy number next to it.
-"3x faster" could mean "3x faster and completely broken." This module
-measures top-1 accuracy on an ImageNet validation subset so every optimized
-variant can be reported as (latency, accuracy) — the only honest way to
-present the tradeoff.
-
-Point --data at an ImageFolder-structured directory:
-    val/
-      n01440764/  *.JPEG
-      n01443537/  *.JPEG
-      ...
-A 1000-image subset of ImageNet val is plenty for a portfolio project.
-"""
-
 import argparse
 
 import torch
